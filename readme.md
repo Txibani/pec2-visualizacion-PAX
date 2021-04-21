@@ -15,7 +15,7 @@ del máster de Ciencia de Datos de la UOC. La práctica está hecha utilizando R
     - *src/pec2_visualizacion_data_analysis.html*: Salida en pdf del informe de datos.
     
 - **DATA**:
-    - *data/pax_all_agreements_data.csv*: Dataset original.
+    - *DATA/pax_all_agreements_data.csv*: Dataset original.
 
 
 
