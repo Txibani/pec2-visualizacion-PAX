@@ -1,0 +1,50 @@
+---
+title: 'PEC2 - Creación de visualizaciones de datos - Visualización de datos'
+author: "Maite Gracia Moisés"
+date: '`r format(Sys.Date(),"%e de %B, %Y")`'
+output:
+  html_document:
+    highlight: default
+    number_sections: yes
+    theme: cosmo
+    toc: yes
+    toc_depth: 2
+  pdf_document:
+    toc: yes
+---
+
+******
+Introducción
+
+
+Análisis de la base de datos PA-X Peace Agreement Database [enlace](https://www.peaceagreements.org/)
+
+******
+# Descripción analítica de los datos 
+******
+
+Procedemos a leer y guardar el fichero csv que contiene todos los datos y mostramos un sumario de las distintas variables que lo componen.
+
+```{r}
+dataSet <- read.csv('../DATA/pax_all_agreements_data.csv')
+str(dataSet)
+summary(dataSet)
+```
+
+Análisis variables con más valores vacíos
+
+```{r}
+Loc1GWNO_var <- sum(is.na(dataSet$Loc1GWNO), na.rm = TRUE)*100/1868
+print(Loc1GWNO_var) # Porcentaje de valores vacíos de la variable Loc1GWNO
+Loc2GWNO_var <- sum(is.na(dataSet$Loc2GWNO), na.rm = TRUE)*100/1868
+print(Loc2GWNO_var) # Porcentaje de valores vacíos de la variable Loc2GWNO
+UcdpCon_var <- sum(is.na(dataSet$UcdpCon), na.rm = TRUE)*100/1868
+print(UcdpCon_var) # Porcentaje de valores vacíos de la variable UcdpCon
+UcdpAgr_var <- sum(is.na(dataSet$UcdpAgr), na.rm = TRUE)*100/1868
+print(UcdpAgr_var) # Porcentaje de valores vacíos de la variable UcdpAgr
+PamAgr_var <- sum(is.na(dataSet$PamAgr), na.rm = TRUE)*100/1868
+print(PamAgr_var) # Porcentaje de valores vacíos de la variable PamAgr
+CowWar_var <- sum(is.na(dataSet$CowWar), na.rm = TRUE)*100/1868
+print(CowWar_var) # Porcentaje de valores vacíos de la variable CowWar
+```
+
