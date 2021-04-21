@@ -11,6 +11,8 @@ output:
     toc_depth: 2
   pdf_document:
     toc: yes
+    toc_depth: 4
+    number_sections: yes
 ---
 
 ******
@@ -47,4 +49,3 @@ print(PamAgr_var) # Porcentaje de valores vacíos de la variable PamAgr
 CowWar_var <- sum(is.na(dataSet$CowWar), na.rm = TRUE)*100/1868
 print(CowWar_var) # Porcentaje de valores vacíos de la variable CowWar
 ```
-
